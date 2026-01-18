@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FV BOBUR | Cyber Space</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #000; overflow: hidden; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        
+        /* Animatsiyali fon */
+        #particles-js { position: absolute; width: 100%; height: 100%; background: radial-gradient(circle, #001510 0%, #000 100%); z-index: 1; }
+
+        .content { position: relative; z-index: 2; height: 100vh; display: flex; align-items: center; justify-content: center; flex-direction: column; color: #fff; }
+
+        h1 { font-size: 5rem; font-weight: 900; letter-spacing: 10px; color: #00ffcc; text-shadow: 0 0 20px #00ffcc, 0 0 40px #00ffcc; margin-bottom: 10px; text-transform: uppercase; }
+
+        .glitch { position: relative; animation: glitch 2s infinite; }
+        @keyframes glitch {
+            0% { transform: skew(0deg); }
+            20% { transform: skew(-2deg); text-shadow: 2px 0 red; }
+            40% { transform: skew(2deg); text-shadow: -2px 0 blue; }
+            60% { transform: skew(0deg); }
+        }
+
+        .social-container { display: flex; gap: 20px; margin-top: 30px; }
+        
+        .card { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); padding: 20px 40px; border-radius: 15px; transition: 0.5s; cursor: pointer; text-decoration: none; color: #fff; display: flex; align-items: center; gap: 15px; font-size: 1.2rem; }
+        
+        .card:hover { transform: translateY(-10px); background: rgba(0, 255, 204, 0.15); border: 1px solid #00ffcc; box-shadow: 0 0 30px rgba(0, 255, 204, 0.4); color: #00ffcc; }
+
+        .status-bar { position: absolute; bottom: 20px; left: 20px; font-family: monospace; color: #00ffcc; font-size: 0.9rem; letter-spacing: 2px; }
+    </style>
+</head>
+<body>
+
+    <div id="particles-js"></div>
+
+    <div class="content">
+        <h1 class="glitch">FV BOBUR</h1>
+        <p style="letter-spacing: 5px; color: #888;">ACCESS GRANTED | KALI LINUX SERVER</p>
+
+        <div class="social-container">
+            <a href="https://t.me/fv_bobur" target="_blank" class="card">
+                <i class="fab fa-telegram-plane fa-2x"></i>
+                <span>TELEGRAM</span>
+            </a>
+            <a href="https://instagram.com/fv_bobur" target="_blank" class="card">
+                <i class="fab fa-instagram fa-2x"></i>
+                <span>INSTAGRAM</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="status-bar">
+        > SYSTEM: ONLINE <br>
+        > LOCALHOST: CONNECTED <br>
+        > ENCRYPTION: AES-256
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": { "value": 100, "density": { "enable": true, "value_area": 800 } },
+                "color": { "value": "#00ffcc" },
+                "shape": { "type": "circle" },
+                "opacity": { "value": 0.5, "random": false },
+                "size": { "value": 3, "random": true },
+                "line_linked": { "enable": true, "distance": 150, "color": "#00ffcc", "opacity": 0.4, "width": 1 },
+                "move": { "enable": true, "speed": 4, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": { "onhover": { "enable": true, "mode": "grab" }, "onclick": { "enable": true, "mode": "push" }, "resize": true },
+                "modes": { "grab": { "distance": 140, "line_linked": { "opacity": 1 } }, "push": { "particles_nb": 4 } }
+            },
+            "retina_detect": true
+        });
+    </script>
+</body>
+</html>
